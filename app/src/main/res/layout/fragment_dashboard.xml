@@ -7,185 +7,120 @@
     tools:context=".DashboardFragment"
     android:orientation="vertical">
 
-    <View
-        android:id="@+id/vHead"
-        android:layout_width="100dp"
-        android:layout_height="2dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/bottom_sheet_header_background"
-        android:layout_marginTop="20dp"/>
-
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/reminder_background">
-
-        <ImageView
-            android:id="@+id/iv_reminderIcon"
-            android:layout_width="22dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/ic_notification" />
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/iv_reminderIcon"
-            android:gravity="center_vertical"
             android:orientation="vertical">
 
             <View
-                android:id="@+id/vHeadEmpty"
-                android:layout_width="110dp"
-                android:layout_height="11dp" />
+                android:id="@+id/vHead"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bottom_sheet_header_background"
+                android:layout_marginTop="20dp"/>
 
-            <TextView
-                android:id="@+id/tv_reminderTitle"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/reminder_background">
+
+                <ImageView
+                    android:id="@+id/iv_reminderIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/ic_notification" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/iv_reminderIcon"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/vHeadEmpty"
+                        android:layout_width="110dp"
+                        android:layout_height="11dp" />
+
+                    <TextView
+                        android:id="@+id/tv_reminderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="-5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false"
+                        android:text="Reminder"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_reminderSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Be mindful on 10.10 sale"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:fontFamily="@font/poppins_bold"
-                android:includeFontPadding="false"
-                android:text="Reminder"
-                android:layout_marginBottom="-5dp"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp">
 
-            <TextView
-                android:id="@+id/tv_reminderSubtitle"
+                <TextView
+                    android:id="@+id/tv_todayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/dashboard_todayagenda"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_todayList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:fontFamily="@font/poppins_medium"
-                android:includeFontPadding="false"
-                android:text="Be mindful on 10.10 sale"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                android:visibility="visible"
+                tools:listitem="@layout/item_spending_list"/>
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/dashboard_clearagenda"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/reminder_background"
+                android:layout_marginBottom="20dp"/>
+
         </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp">
-
-        <TextView
-            android:id="@+id/tv_todayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Today"
-            android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_totalSpendTodayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins_medium"
-            android:includeFontPadding="false"
-            android:text="Today Spent: Rp220.000"
-            android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="10sp" />
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_todayList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:itemCount="5"
-        android:visibility="visible"
-        tools:listitem="@layout/item_spending_list"/>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp">
-
-        <TextView
-            android:id="@+id/tv_todaySeeAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:fontFamily="@font/poppins_semibold"
-            android:includeFontPadding="false"
-            android:text="See All"
-            android:textColor="@color/SpendPal_EarlBlue"
-            android:textSize="12sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp">
-
-        <TextView
-            android:id="@+id/tv_yesterdayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Yesterday"
-            android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_totalSpendYesterdayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins_medium"
-            android:includeFontPadding="false"
-            android:text="Yesterday Spent: Rp450.000"
-            android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="10sp" />
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_yesterdayList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:visibility="visible"
-        tools:itemCount="6"
-        tools:listitem="@layout/item_spending_yesterday"/>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp">
-
-        <TextView
-            android:id="@+id/tv_yesterdaySeeAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:fontFamily="@font/poppins_semibold"
-            android:includeFontPadding="false"
-            android:text="See All"
-            android:textColor="@color/SpendPal_EarlBlue"
-            android:textSize="12sp" />
-    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

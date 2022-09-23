@@ -17,17 +17,10 @@
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="40dp">
 
-                <ImageView
-                    android:id="@+id/iv_avatar"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/avatar_circle"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:layout_toEndOf="@+id/iv_avatar"
                     android:orientation="vertical">
 
                     <TextView
@@ -37,8 +30,7 @@
                         android:layout_marginStart="15dp"
                         android:fontFamily="@font/poppins_bold"
                         android:includeFontPadding="false"
-                        android:layout_marginBottom="-7dp"
-                        android:text="Hi Diaz"
+                        android:text="@string/dashboard_greeting"
                         android:textColor="@color/white"
                         android:textSize="20sp"/>
 
@@ -49,7 +41,7 @@
                         android:layout_marginStart="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="track your expenses today"
+                        android:text="@string/dashboard_subtitlegreeting"
                         android:textColor="@color/white"
                         android:textSize="14sp"/>
                 </LinearLayout>
@@ -68,31 +60,6 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="Account Total This Month"
-                        android:layout_marginBottom="-7dp"
-                        android:textColor="@color/white"
-                        android:includeFontPadding="false"
-                        android:textSize="12sp">
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/tv_totalAccount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Rp1.760.991"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:includeFontPadding="false"
-                        android:layout_gravity="end">
-
-                    </TextView>
                 </LinearLayout>
             </RelativeLayout>
 
