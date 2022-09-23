@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.navigation_add) {
                 changeFragment(AddFragment.class);
                 return true;
-            } else if (itemId == R.id.navigation_history) {
-                changeFragment(HistoryFragment.class);
-                return true;
             }
             return false;
         });

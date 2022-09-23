@@ -1,72 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="180dp"
-android:layout_height="200dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
 
     <LinearLayout
         android:id="@+id/lv_item"
-        android:layout_width="170dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:background="@drawable/item_background"
+        android:paddingBottom="10dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_listName"
+            android:id="@+id/tv_listTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Rp56.000"
-            android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/tv_spendingMerchant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semibold"
             android:includeFontPadding="false"
-            android:text="Starbucks"
+            android:text="Ke kantor (WFO)"
             android:textColor="@color/SpendPal_DarkBlue"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/tv_spendingMerchantSub"
+            android:id="@+id/tv_listSubTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/poppins_medium"
-            android:includeFontPadding="false"
-            android:text="Cafe Latte"
+            android:paddingRight="20dp"
+            android:text="Jangan lupa buat bawa bekal dan juga minum yas"
             android:textColor="@color/SpendPal_DarkBlue"
             android:textSize="12sp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp">
 
             <ImageView
-                android:id="@+id/iv_iconCategory"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_plus"/>
+                android:id="@+id/iv_Time"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/ic_time_circle" />
 
             <TextView
-                android:id="@+id/tv_Category"
+                android:id="@+id/tv_listTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:text="Food"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
                 android:fontFamily="@font/poppins_medium"
-                android:layout_marginStart="5dp"/>
-        </LinearLayout>
+                android:includeFontPadding="false"
+                android:layout_toEndOf="@+id/iv_Time"
+                android:text="09:00"
+                android:textColor="@color/SpendPal_DarkBlue"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_Location"
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/tv_listTime"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:layout_toEndOf="@id/iv_Location"
+                android:text="Kantor Phincon"
+                android:textColor="@color/SpendPal_DarkBlue"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_Clear"
+                android:layout_width="14dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/ic_delete" />
+
+        </RelativeLayout>
 
     </LinearLayout>
     <RelativeLayout
