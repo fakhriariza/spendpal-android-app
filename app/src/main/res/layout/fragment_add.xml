@@ -1,18 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFragment">
+    android:background="@color/SpendPal_Blue"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="iniii add"
-        android:fontFamily="@font/poppins_semibold"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:textColor="@color/SpendPal_DarkBlue"/>
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:includeFontPadding="false"
+            android:text="@string/add_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_sheet_background"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:id="@+id/vHead"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bottom_sheet_header_background"
+                android:layout_marginTop="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_titleAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_agendatitle"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_titleAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_agendatitlehint"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textColorHint="@color/SpendPal_LightGrey"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/tv_descAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_agendadescribe"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/et_descAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_agendadescribehint"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textColorHint="@color/SpendPal_LightGrey"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/tv_locationAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_agendalocation"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/et_locationAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_agendalocationhint"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textColorHint="@color/SpendPal_LightGrey"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/tv_timeAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_agendatime"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/et_timeAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/add_agendatimehint"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textColorHint="@color/SpendPal_LightGrey"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/tv_categoryAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_agendaCategory"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/et_categoryAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:entries="@array/add_categoryoption"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/edittext_background"
+                    android:textColor="@color/SpendPal_DarkBlue"
+                    android:textColorHint="@color/SpendPal_LightGrey"
+                    android:textSize="14sp"
+                    android:theme="@style/Spinner"
+                    android:includeFontPadding="false"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/add_addagenda"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:layout_gravity="end"
+                    android:background="@drawable/reminder_background"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

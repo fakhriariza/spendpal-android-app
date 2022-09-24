@@ -6,4 +6,25 @@
     <string name="dashboard_subtitlegreeting">Jangan lupa minum agar tetap fokus</string>
     <string name="dashboard_todayagenda">Agenda Hari Ini</string>
     <string name="dashboard_clearagenda">Hapus Agenda</string>
+    <string name="add_title">Tulis Agendamu Hari Ini!</string>
+    <string name="add_agendatitle">Mau ngapain nih?</string>
+    <string name="add_agendadescribe">Apa aja yang harus disiapin?</string>
+    <string name="add_agendalocation">Tempatnya dimana?</string>
+    <string name="add_agendatime">Jam berapa?</string>
+    <string name="add_agendaCategory">Pilih kategorinya ya</string>
+    <string name="add_agendatitlehint">Hari ini aku…</string>
+    <string name="add_agendadescribehint">Yang dibutuhin…</string>
+    <string name="add_agendalocationhint">Ada di…</string>
+    <string name="add_agendatimehint">Jam…</string>
+    <string name="add_agendacategoryhint">Klik kategorinya!</string>
+    <string name="add_addagenda">Tambah</string>
+
+    <string-array name="add_categoryoption">
+        <item>Kerja</item>
+        <item>Belajar</item>
+        <item>Liburan</item>
+        <item>Makan</item>
+        <item>Main</item>
+        <item>Olahraga</item>
+    </string-array>
 </resources>
