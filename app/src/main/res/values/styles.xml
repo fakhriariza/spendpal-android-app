@@ -3,4 +3,13 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="android:fontFamily">@font/poppins_semibold</item>
     </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/SpendPal_DarkBlue</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/SpendPal_LightGrey</item>
+    </style>
 </resources>
