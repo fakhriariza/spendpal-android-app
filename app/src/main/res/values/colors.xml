@@ -11,4 +11,5 @@
     <color name="SpendPal_DarkBlue">#010246</color>
     <color name="SpendPal_LightGrey">#DEE3EF</color>
     <color name="SpendPal_EarlBlue">#273FAA</color>
+    <color name="SpendPal_Grey">#DEE3EF</color>
 </resources>
